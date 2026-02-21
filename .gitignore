@@ -13,7 +13,6 @@ pids
 *.pid
 *.seed
 *.pid.lock
-
 # Coverage (если добавишь позже)
 coverage/
 
