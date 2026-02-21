@@ -1,5 +1,5 @@
-const { expect } = require('chai');
-const { RegistrationForm } = require('../src/registrationForm');
+import { expect } from 'chai';
+import { RegistrationForm } from '../src/registrationForm';
 
 describe('RegistrationForm – Positive cases', () => {
   const form = new RegistrationForm();

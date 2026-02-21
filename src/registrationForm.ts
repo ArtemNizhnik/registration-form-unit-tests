@@ -1,4 +1,4 @@
-class RegistrationForm {
+ export class RegistrationForm {
   validateUsername(username: string): boolean {
     if (!username) return false;
     if (username.length < 3 || username.length > 20) return false;
@@ -11,28 +11,23 @@ class RegistrationForm {
   }
 
   validatePassword(password: string): boolean {
-  const hasUppercase = /[A-Z]/.test(password);
-  const hasDigit = /\d/.test(password);
-  const hasMinLength = password.length >= 8;
+    const hasUppercase = /[A-Z]/.test(password);
+    const hasDigit = /\d/.test(password);
+    const hasMinLength = password.length >= 8;
 
-  return hasUppercase && hasDigit && hasMinLength;
-}
+    return hasUppercase && hasDigit && hasMinLength;
+  }
 
   validateConfirmPassword(password: string, confirmPassword: string): boolean {
     return password === confirmPassword;
   }
 
-validateAge(age: number): boolean {
-  if (typeof age !== 'number') {
-    return false;
+  validateAge(age: number): boolean {
+    if (typeof age !== 'number') return false;
+    return age >= 18 && age <= 99;
   }
-
-  return age >= 18 && age <= 99;
-}
 
   validateTermsAccepted(accepted: boolean): boolean {
     return accepted === true;
   }
 }
-
-module.exports = { RegistrationForm };
