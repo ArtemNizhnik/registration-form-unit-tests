@@ -14,7 +14,6 @@
     const hasUppercase = /[A-Z]/.test(password);
     const hasDigit = /\d/.test(password);
     const hasMinLength = password.length >= 8;
-
     return hasUppercase && hasDigit && hasMinLength;
   }
 

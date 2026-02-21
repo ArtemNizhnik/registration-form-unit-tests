@@ -16,7 +16,6 @@ pids
 
 # Coverage (если добавишь позже)
 coverage/
-
 # Build output
 dist/
 build/
